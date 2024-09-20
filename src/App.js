@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
 import CheckoutScreen from "./pages/Checkout";
 import PaymentScreen from "./pages/PaymentScreen";
+import LoginPage from "./pages/auth/Login";
+import RegisterPage from "./pages/auth/Register";
 
 function App() {
   return (
@@ -14,9 +16,11 @@ function App() {
       <div className="min-h-[83vh]">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/product/:id" element={<ProductDetails />}></Route>
+          <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/checkout" element={<CheckoutScreen />} />
           <Route path="/payment" element={<PaymentScreen />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<RegisterPage />} />
         </Routes>
       </div>
       <Sidebar />

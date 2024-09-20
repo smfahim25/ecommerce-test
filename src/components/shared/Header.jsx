@@ -33,12 +33,12 @@ const Header = () => {
         </div>
 
         {/* cart */}
-        <div className="flex gap-3">
+        <div className="flex gap-5">
           <Link to={"/login"} className="text-lg">
-            <div className="w-[40px]">Login</div>
+            <div className="w-[40px] font-semibold">Login</div>
           </Link>
-          <Link to={"/signup"} className="text-lg">
-            <div className="">Sign Up</div>
+          <Link to={"/signup"} className="text-lg ">
+            <div className="font-semibold">Sign Up</div>
           </Link>
           <div
             className="cursor-pointer flex relative"
@@ -46,7 +46,6 @@ const Header = () => {
           >
             <BsBag className="text-2xl" />
             <div className="bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center">
-              {" "}
               {itemAmount}
             </div>
           </div>
