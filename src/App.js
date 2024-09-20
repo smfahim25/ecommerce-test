@@ -18,11 +18,12 @@ import OrderDetail from "./pages/AdminDashboard/Orders/OrdersDetails";
 import ProductList from "./pages/AdminDashboard/Products/Products";
 import ProductDetail from "./pages/AdminDashboard/Products/ProductDetails";
 import AddProduct from "./pages/AdminDashboard/Products/AddProduct";
+import NotFound from "./pages/NotFound/NotFound";
+import "./App.css";
 
 function App() {
   return (
     <div className="overflow-hidden">
-      {/* Common Header */}
       <Header />
 
       <Routes>
@@ -33,9 +34,8 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<RegisterPage />} />
 
-        {/* Admin Routes with AdminLayout */}
         <Route path="/admin/*" element={<AdminLayout />}>
-          <Route path="" element={<Navigate to="dashboard" />} />
+          <Route index element={<Navigate to="dashboard" />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="customers" element={<CustomersList />} />
           <Route path="customers/:id" element={<CustomerDetail />} />
@@ -45,7 +45,9 @@ function App() {
           <Route path="products" element={<ProductList />} />
           <Route path="products/:id" element={<ProductDetail />} />
           <Route path="products/add" element={<AddProduct />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Sidebar />
