@@ -4,6 +4,8 @@ import Footer from "./components/shared/Footer";
 import Sidebar from "./components/shared/Sidebar";
 import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
+import CheckoutScreen from "./pages/Checkout";
+import PaymentScreen from "./pages/PaymentScreen";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductDetails />}></Route>
+          <Route path="/checkout" element={<CheckoutScreen />} />
+          <Route path="/payment" element={<PaymentScreen />} />
         </Routes>
       </div>
       <Sidebar />

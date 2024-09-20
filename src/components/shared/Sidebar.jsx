@@ -27,7 +27,7 @@ const Sidebar = () => {
           <IoMdArrowForward className="text-2xl" />
         </div>
       </div>
-      <div className="flex flex-col gap-y-2 h-[360px] md:h-[480px] lg:h-[460px] overflow-y-auto overflow-x-hidden border-b">
+      <div className="flex flex-col gap-y-2 h-[460px] md:h-[480px] lg:h-[460px] overflow-y-auto overflow-x-hidden border-b">
         {cart.map((item) => {
           return <CartItem item={item} key={item.id} />;
         })}
@@ -47,8 +47,9 @@ const Sidebar = () => {
             <FiTrash2 />
           </div>
         </div>
+
         <Link
-          to={"/"}
+          to={"/checkout"}
           className="bg-primary flex p-3 justify-center items-center text-white w-full font-medium"
         >
           Checkout
