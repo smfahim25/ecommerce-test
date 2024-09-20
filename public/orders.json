@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "customerName": "John Doe",
+    "total": 100.5,
+    "status": "Shipped"
+  },
+  {
+    "id": 2,
+    "customerName": "Jane Smith",
+    "total": 250.0,
+    "status": "Processing"
+  },
+  {
+    "id": 3,
+    "customerName": "Bob Johnson",
+    "total": 75.0,
+    "status": "Delivered"
+  },
+  {
+    "id": 4,
+    "customerName": "Alice Brown",
+    "total": 150.25,
+    "status": "Cancelled"
+  },
+  {
+    "id": 5,
+    "customerName": "Charlie White",
+    "total": 300.0,
+    "status": "Pending"
+  }
+]

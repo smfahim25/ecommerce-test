@@ -13,8 +13,13 @@ const AdminLayout = () => {
     setIsSidebarOpen((prev) => !prev);
   };
 
+  // Function to close the sidebar
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
+
   return (
-    <div className="flex bg-primary border-b-2">
+    <div className="flex bg-primary border-b-2 min-h-screen">
       {/* Mobile Toggle Button */}
       <button
         className="md:hidden p-4 text-white bg-primary flex justify-start"
@@ -25,7 +30,7 @@ const AdminLayout = () => {
 
       {/* Sidebar */}
       <aside
-        className={` fixed inset-0 bg-primary text-white h-full transform transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:w-52  ${
+        className={`fixed inset-0 bg-primary text-white h-full transform transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:w-52 ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -40,6 +45,7 @@ const AdminLayout = () => {
               <Link
                 to="/admin/dashboard"
                 className="flex items-center gap-3 py-2.5 px-4 hover:bg-gray-700"
+                onClick={closeSidebar} // Close sidebar on click
               >
                 <MdSpaceDashboard />
                 Dashboard
@@ -49,6 +55,7 @@ const AdminLayout = () => {
               <Link
                 to="/admin/customers"
                 className="flex items-center gap-3 py-2.5 px-4 hover:bg-gray-700"
+                onClick={closeSidebar} // Close sidebar on click
               >
                 <FaUsers />
                 Customers
@@ -58,6 +65,7 @@ const AdminLayout = () => {
               <Link
                 to="/admin/orders"
                 className="flex items-center gap-3 py-2.5 px-4 hover:bg-gray-700"
+                onClick={closeSidebar} // Close sidebar on click
               >
                 <BsCartFill />
                 Orders
@@ -67,6 +75,7 @@ const AdminLayout = () => {
               <Link
                 to="/admin/products"
                 className="flex items-center gap-3 py-2.5 px-4 hover:bg-gray-700"
+                onClick={closeSidebar} // Close sidebar on click
               >
                 <GiCardboardBox />
                 Products

@@ -6,13 +6,18 @@ import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
 import CheckoutScreen from "./pages/Checkout";
 import PaymentScreen from "./pages/PaymentScreen";
-import LoginPage from "./pages/auth/Login";
-import RegisterPage from "./pages/auth/Register";
 import AdminLayout from "./components/AdminLayout";
 import Dashboard from "./pages/AdminDashboard/Dashboard";
 import CustomersList from "./pages/AdminDashboard/Customer/CustomerList";
 import CustomerDetail from "./pages/AdminDashboard/Customer/CustomerDetails";
 import AddCustomer from "./pages/AdminDashboard/Customer/AddCustomer";
+import LoginPage from "./pages/auth/Login";
+import RegisterPage from "./pages/auth/Register";
+import OrderList from "./pages/AdminDashboard/Orders/Orders";
+import OrderDetail from "./pages/AdminDashboard/Orders/OrdersDetails";
+import ProductList from "./pages/AdminDashboard/Products/Products";
+import ProductDetail from "./pages/AdminDashboard/Products/ProductDetails";
+import AddProduct from "./pages/AdminDashboard/Products/AddProduct";
 
 function App() {
   return (
@@ -35,8 +40,11 @@ function App() {
           <Route path="customers" element={<CustomersList />} />
           <Route path="customers/:id" element={<CustomerDetail />} />
           <Route path="customers/add" element={<AddCustomer />} />
-          {/* Add customer list route */}
-          {/* Add more admin routes as needed */}
+          <Route path="orders" element={<OrderList />} />
+          <Route path="orders/:id" element={<OrderDetail />} />
+          <Route path="products" element={<ProductList />} />
+          <Route path="products/:id" element={<ProductDetail />} />
+          <Route path="products/add" element={<AddProduct />} />
         </Route>
       </Routes>
 
