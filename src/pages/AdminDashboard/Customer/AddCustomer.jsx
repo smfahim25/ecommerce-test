@@ -82,7 +82,7 @@ const AddCustomer = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-2">
       <nav className="mb-6">
         <Link to="/admin/customers" className="text-blue-500 hover:underline">
           Customers

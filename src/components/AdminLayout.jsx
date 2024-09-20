@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom"; // Outlet for nested routes
-import { FiMenu, FiX } from "react-icons/fi"; // Menu and close icons
+import { Link, Outlet } from "react-router-dom";
+import { FiMenu, FiX } from "react-icons/fi";
 import { MdSpaceDashboard } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 import { BsCartFill } from "react-icons/bs";
@@ -13,14 +13,12 @@ const AdminLayout = () => {
     setIsSidebarOpen((prev) => !prev);
   };
 
-  // Function to close the sidebar
   const closeSidebar = () => {
     setIsSidebarOpen(false);
   };
 
   return (
-    <div className="flex bg-primary border-b-2 min-h-screen">
-      {/* Mobile Toggle Button */}
+    <div className="md:flex md:bg-primary border-b-2 min-h-screen">
       <button
         className="md:hidden p-4 text-white bg-primary flex justify-start"
         onClick={toggleSidebar}
@@ -28,7 +26,6 @@ const AdminLayout = () => {
         <FiMenu size={24} />
       </button>
 
-      {/* Sidebar */}
       <aside
         className={`fixed inset-0 bg-primary text-white h-full transform transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:w-52 ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
@@ -39,13 +36,13 @@ const AdminLayout = () => {
             <FiX size={24} />
           </button>
         </div>
-        <nav className="mt-10">
+        <nav className="mt-10 overflow-y-auto h-full">
           <ul className="text-xl">
             <li>
               <Link
                 to="/admin/dashboard"
                 className="flex items-center gap-3 py-2.5 px-4 hover:bg-gray-700"
-                onClick={closeSidebar} // Close sidebar on click
+                onClick={closeSidebar}
               >
                 <MdSpaceDashboard />
                 Dashboard
@@ -55,7 +52,7 @@ const AdminLayout = () => {
               <Link
                 to="/admin/customers"
                 className="flex items-center gap-3 py-2.5 px-4 hover:bg-gray-700"
-                onClick={closeSidebar} // Close sidebar on click
+                onClick={closeSidebar}
               >
                 <FaUsers />
                 Customers
@@ -65,7 +62,7 @@ const AdminLayout = () => {
               <Link
                 to="/admin/orders"
                 className="flex items-center gap-3 py-2.5 px-4 hover:bg-gray-700"
-                onClick={closeSidebar} // Close sidebar on click
+                onClick={closeSidebar}
               >
                 <BsCartFill />
                 Orders
@@ -75,7 +72,7 @@ const AdminLayout = () => {
               <Link
                 to="/admin/products"
                 className="flex items-center gap-3 py-2.5 px-4 hover:bg-gray-700"
-                onClick={closeSidebar} // Close sidebar on click
+                onClick={closeSidebar}
               >
                 <GiCardboardBox />
                 Products

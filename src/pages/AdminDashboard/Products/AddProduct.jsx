@@ -38,7 +38,7 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="p-6">
+    <div className="p-2">
       <nav className="mb-6">
         <Link to="/admin/products" className="text-blue-500 hover:underline">
           Products

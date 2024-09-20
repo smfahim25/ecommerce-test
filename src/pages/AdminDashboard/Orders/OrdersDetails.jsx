@@ -30,7 +30,7 @@ const OrderDetail = () => {
   }
 
   return (
-    <div className="p-6">
+    <div className="p-2">
       <nav className="mb-6">
         <Link to="/admin/orders" className="text-blue-500 hover:underline">
           Orders

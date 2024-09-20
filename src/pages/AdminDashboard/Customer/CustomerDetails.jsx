@@ -21,7 +21,7 @@ const CustomerDetail = () => {
   }
 
   return (
-    <div className="p-6">
+    <div className="p-2">
       <nav className="mb-6">
         <Link to="/admin/customers" className="text-blue-500 hover:underline">
           Customers
@@ -29,7 +29,7 @@ const CustomerDetail = () => {
         <span className="mx-2">/</span>
         <span className="text-gray-500">Customer Details</span>
       </nav>
-      <h1 className="text-4xl font-bold mb-6">Customer Details</h1>
+      <h1 className="text-3xl font-bold mb-6">Customer Details</h1>
       <div className="bg-base-100 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
         <div className="mb-4">
           <strong>ID:</strong> {customer.id}
