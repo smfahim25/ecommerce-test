@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { BsBag } from "react-icons/bs";
 import { CartContext } from "../../context/CartContext";
 import { SidebarContext } from "../../context/SidebarContext";
-import { PiSignIn } from "react-icons/pi";
+import { FaRegUser } from "react-icons/fa";
 
 const Header = () => {
   // header state
@@ -36,9 +36,12 @@ const Header = () => {
         </div>
 
         {/* cart */}
-        <div className="flex gap-5">
-          <Link to={"/login"} className="text-lg">
-            <div className="w-[40px] font-semibold">Login</div>
+        <div className="flex gap-3">
+          <Link to={"/login"} className="text-lg flex items-center gap-1">
+            <span>
+              <FaRegUser />
+            </span>
+            <div className=" font-semibold">Login/Register</div>
           </Link>
           <div
             className="cursor-pointer flex relative"
