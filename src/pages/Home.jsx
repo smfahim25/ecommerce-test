@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { ProductContext } from "../../context/ProductContext";
-import Hero from "../../components/shared/Home/Hero";
-import Product from "../../components/shared/Home/Product";
+import { ProductContext } from "../context/ProductContext";
+import Hero from "../components/Home/Hero";
+import Product from "../components/Home/Product";
 
 const Home = () => {
   // get products from product context
