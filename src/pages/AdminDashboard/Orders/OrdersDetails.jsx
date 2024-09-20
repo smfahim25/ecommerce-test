@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Loader from "../../../components/shared/Loader";
 
 const OrderDetail = () => {
@@ -31,6 +31,13 @@ const OrderDetail = () => {
 
   return (
     <div className="p-6">
+      <nav className="mb-6">
+        <Link to="/admin/orders" className="text-blue-500 hover:underline">
+          Orders
+        </Link>
+        <span className="mx-2">/</span>
+        <span className="text-gray-500">Order Details</span>
+      </nav>
       <h1 className="text-3xl font-bold mb-6">Order Details</h1>
       <div className="bg-white p-6 rounded-lg shadow-lg">
         <p>

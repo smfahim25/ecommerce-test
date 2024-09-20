@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const AddProduct = () => {
   const [productData, setProductData] = useState({
@@ -38,6 +39,13 @@ const AddProduct = () => {
 
   return (
     <div className="p-6">
+      <nav className="mb-6">
+        <Link to="/admin/products" className="text-blue-500 hover:underline">
+          Products
+        </Link>
+        <span className="mx-2">/</span>
+        <span className="text-gray-500">Add Products</span>
+      </nav>
       <h1 className="text-3xl font-bold mb-4">Add Product</h1>
       <form
         onSubmit={handleSubmit}

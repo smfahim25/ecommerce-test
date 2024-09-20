@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const AddCustomer = () => {
   const [formData, setFormData] = useState({
@@ -82,6 +83,13 @@ const AddCustomer = () => {
 
   return (
     <div className="container mx-auto p-4">
+      <nav className="mb-6">
+        <Link to="/admin/customers" className="text-blue-500 hover:underline">
+          Customers
+        </Link>
+        <span className="mx-2">/</span>
+        <span className="text-gray-500">Add Customer</span>
+      </nav>
       <h2 className="text-2xl font-bold mb-4">Add Customer</h2>
       <form
         onSubmit={handleSubmit}
