@@ -1,14 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { BsBag } from "react-icons/bs";
 import { CartContext } from "../../context/CartContext";
 import { SidebarContext } from "../../context/SidebarContext";
 
 const Header = () => {
   // header state
+  const location = useLocation();
   const [isActive, setIsActive] = useState(false);
   const { isOpen, setIsOpen } = useContext(SidebarContext);
   const { itemAmount } = useContext(CartContext);
+  const isAdminPath = location.pathname.startsWith("/admin");
 
   // event listener
   useEffect(() => {
@@ -19,9 +21,9 @@ const Header = () => {
 
   return (
     <header
-      className={`${
-        isActive ? "bg-white py-4 shadow-md" : "bg-none py-6"
-      } fixed w-full z-10 lg:px-8 transition-all`}
+      className={`${isActive ? "bg-white py-4 shadow-md" : "bg-none py-6"} ${
+        isAdminPath ? "static" : "fixed"
+      } w-full z-10 lg:px-8 transition-all`}
     >
       <div className="container mx-auto flex items-center justify-between h-full">
         <div>
