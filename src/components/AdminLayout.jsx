@@ -14,7 +14,7 @@ const AdminLayout = () => {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex bg-primary border-b-2">
       {/* Mobile Toggle Button */}
       <button
         className="md:hidden p-4 text-white bg-primary flex justify-start"
@@ -25,7 +25,7 @@ const AdminLayout = () => {
 
       {/* Sidebar */}
       <aside
-        className={` fixed inset-0 bg-primary text-white h-full transform transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:w-52 border-b-2 ${
+        className={` fixed inset-0 bg-primary text-white h-full transform transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:w-52  ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >

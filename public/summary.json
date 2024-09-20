@@ -1,0 +1,15 @@
+{
+  "customerGrowth": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "data": [5, 15, 20, 10, 25, 30]
+  },
+  "revenue": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "data": [5000, 7000, 3000, 5000, 9000, 12000]
+  },
+  "metrics": {
+    "totalCustomers": 120,
+    "totalOrders": 85,
+    "totalRevenue": 25000
+  }
+}
