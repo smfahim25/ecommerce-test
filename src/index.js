@@ -4,13 +4,22 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import ProductProvider from "./context/ProductContext";
+import CartProvider from "./context/CartContext";
+import SidebarProvider from "./context/SidebarContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <SidebarProvider>
+      <CartProvider>
+        <ProductProvider>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </ProductProvider>
+      </CartProvider>
+    </SidebarProvider>
   </React.StrictMode>
 );
 

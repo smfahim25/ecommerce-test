@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BsBag } from "react-icons/bs";
+import { CartContext } from "../../context/CartContext";
+import { SidebarContext } from "../../context/SidebarContext";
 
 const Header = () => {
   // header state
   const [isActive, setIsActive] = useState(false);
+  const { isOpen, setIsOpen } = useContext(SidebarContext);
+  const { itemAmount } = useContext(CartContext);
 
   // event listener
   useEffect(() => {
@@ -36,9 +40,15 @@ const Header = () => {
           <Link to={"/signup"} className="text-lg">
             <div className="">Sign Up</div>
           </Link>
-          <div className="cursor-pointer flex relative">
+          <div
+            className="cursor-pointer flex relative"
+            onClick={() => setIsOpen(!isOpen)}
+          >
             <BsBag className="text-2xl" />
-            <div className="bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center"></div>
+            <div className="bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center">
+              {" "}
+              {itemAmount}
+            </div>
           </div>
         </div>
       </div>

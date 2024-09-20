@@ -23,7 +23,7 @@ module.exports = {
         secondary: "#F5E6E0",
       },
       backgroundImage: {
-        hero: "url('/img/bghero.jpg')",
+        hero: "url('./img/bghero.jpg')",
       },
     },
   },
